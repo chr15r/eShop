@@ -1,5 +1,6 @@
 using eShop.DataStore.HardCoded;
 using eShop.UseCases.PluginInterfaces.DataStore;
+using eShop.UseCases.PluginInterfaces.UI;
 using eShop.UseCases.SearchProductScreen;
 using eShop.UseCases.ViewProductScreen;
 using eShop.Web.Data;
@@ -35,9 +36,14 @@ namespace eShop.Web
             services.AddSingleton<WeatherForecastService>();
 
             services.AddSingleton<IProductRepository, ProductRepository>();
+            services.AddScoped<IShoppingCart, eShop.ShoppingCart.LocalStorage.ShoppingCart>();
+
+
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
 
+            services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

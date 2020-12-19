@@ -17,7 +17,6 @@ namespace eShop.UseCases.ViewProductScreen
             shoppingCart = _shoppingCart;
         }
 
-
         public async void Execute(int productId)
         {
             var product = productRepository.GetProduct(productId);
