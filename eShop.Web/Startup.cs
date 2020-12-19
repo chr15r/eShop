@@ -2,6 +2,7 @@ using eShop.DataStore.HardCoded;
 using eShop.UseCases.PluginInterfaces.DataStore;
 using eShop.UseCases.PluginInterfaces.UI;
 using eShop.UseCases.SearchProductScreen;
+using eShop.UseCases.ShoppingCartScreen;
 using eShop.UseCases.ViewProductScreen;
 using eShop.Web.Data;
 using Microsoft.AspNetCore.Builder;
@@ -41,8 +42,8 @@ namespace eShop.Web
 
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
             services.AddTransient<ISearchProductUseCase, SearchProductUseCase>();
-
             services.AddTransient<IAddProductToCartUseCase, AddProductToCartUseCase>();
+            services.AddTransient<IViewShoppingCartUseCase, ViewShoppingCartUseCase>();
            
         }
 
