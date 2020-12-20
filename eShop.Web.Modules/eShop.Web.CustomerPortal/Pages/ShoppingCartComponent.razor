@@ -13,7 +13,7 @@
                 {
 
                     // Line items
-                    <LineItemComponent LineItem="order.LineItems[i]"></LineItemComponent>
+                    <LineItemComponent LineItem="order.LineItems[i]" OnDeleteProduct="HandleDeleteProduct" OnUpdateQuantity="HandleUpdateQuantity"></LineItemComponent>
 
                     @if (i < order.LineItems.Count - 1)
                     {
@@ -45,6 +45,16 @@
             order = await viewShoppingCartUseCase.Execute();
             StateHasChanged();
         }
+    }
+
+    private void HandleDeleteProduct(Order order)
+    {
+        this.order = order;
+    }
+
+    private void HandleUpdateQuantity(Order order)
+    {
+        this.order = order;
     }
 
 }
