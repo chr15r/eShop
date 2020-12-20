@@ -1,5 +1,7 @@
 using eShop.DataStore.HardCoded;
+using eShop.StateStore.DI;
 using eShop.UseCases.PluginInterfaces.DataStore;
+using eShop.UseCases.PluginInterfaces.StateStore;
 using eShop.UseCases.PluginInterfaces.UI;
 using eShop.UseCases.SearchProductScreen;
 using eShop.UseCases.ShoppingCartScreen;
@@ -37,7 +39,9 @@ namespace eShop.Web
             services.AddSingleton<WeatherForecastService>();
 
             services.AddSingleton<IProductRepository, ProductRepository>();
+
             services.AddScoped<IShoppingCart, eShop.ShoppingCart.LocalStorage.ShoppingCart>();
+            services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
 
 
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
