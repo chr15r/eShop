@@ -1,0 +1,19 @@
+﻿@page "/outstandingOrders"
+@inject IViewOutstandingOrdersUseCase viewOutstandingOrdersUseCase
+
+<h3>Outstanding Orders</h3>
+<br />
+
+<OrderlistComponent Orders="Orders"></OrderlistComponent>
+
+
+@code {
+    private IEnumerable<Order> Orders;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Orders = viewOutstandingOrdersUseCase.Execute();
+
+    }
+}
