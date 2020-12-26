@@ -31,7 +31,7 @@ namespace eShop.Web.Controllers
             return Redirect("/outstandingOrders");
         }
 
-        [Route("/logOut")]
+        [Route("/logout")]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();

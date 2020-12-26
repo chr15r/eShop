@@ -1,4 +1,6 @@
 ﻿@page "/orderDetail/{id:int}"
+
+@attribute [Authorize]
 @inject IViewOrderDetailUseCase viewOrderDetailUseCase
 @inject IProcessOrderUseCase processOrderUseCase
 @inject NavigationManager navigationManager
@@ -27,11 +29,11 @@
         <tbody>
             @foreach (var item in order.LineItems)
             {
-            <tr>
-                <td>@item.Product.Name</td>
-                <td>@item.Product.Price</td>
-                <td>@item.Quantity</td>
-            </tr>
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Product.Price</td>
+                    <td>@item.Quantity</td>
+                </tr>
             }
         </tbody>
     </table>
