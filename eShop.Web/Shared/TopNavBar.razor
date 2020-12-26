@@ -3,16 +3,33 @@
         <li class="nav-item">
             <a class="navbar-brand" href="">eShop</a>
         </li>
-        <li class="nav-item">
-            <NavLink class="nav-link" href="outstandingOrders">Outstanding Orders</NavLink>
-        </li>
-        <li class="nav-item">
-            <NavLink class="nav-link" href="processedOrders">Processed Orders</NavLink>
-        </li>
+
+        <AuthorizeView>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="outstandingOrders">Outstanding Orders</NavLink>
+            </li>
+            <li class="nav-item">
+                <NavLink class="nav-link" href="processedOrders">Processed Orders</NavLink>
+            </li>
+        </AuthorizeView>
+       
         <li class="nav-item ml-auto">
-            <NavLink class="nav-link" href="cart">
-                <CartComponent></CartComponent>
-            </NavLink>
+
+            <AuthorizeView>
+                <Authorized>
+                    <NavLink class="nav-link" href="/logout">
+                        Sign Out
+                    </NavLink>
+                </Authorized>
+                <NotAuthorized>
+                    <NavLink class="nav-link" href="/cart">
+                        <CartComponent></CartComponent>
+                    </NavLink>
+                </NotAuthorized>
+
+            </AuthorizeView>
+
+           
         </li>
     </ul>
 
