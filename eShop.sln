@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.StateStore.DI", "Plug
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperDemo", "DapperDemo\DapperDemo.csproj", "{48BD5131-5D6B-456E-BB71-38B8927653A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.DataStore.SQL.Dapper", "Plugins\eShop.DataStore.SQL.Dapper\eShop.DataStore.SQL.Dapper.csproj", "{35F7FE9A-883B-480A-A547-8E7B11F23031}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F7FE9A-883B-480A-A547-8E7B11F23031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F7FE9A-883B-480A-A547-8E7B11F23031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F7FE9A-883B-480A-A547-8E7B11F23031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F7FE9A-883B-480A-A547-8E7B11F23031}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{F1096659-1F14-48FF-9C19-6E83296D46E9} = {2712DDB3-695A-4723-BA23-A5902E8187ED}
 		{74F18AC3-1597-44B4-92FC-AFFD8C9C908E} = {109FE382-C7F3-475B-A30B-4BDF53C51EAD}
 		{2FA07E90-978C-4FD4-A943-925168F23D3C} = {109FE382-C7F3-475B-A30B-4BDF53C51EAD}
+		{35F7FE9A-883B-480A-A547-8E7B11F23031} = {109FE382-C7F3-475B-A30B-4BDF53C51EAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18568B84-457C-4046-8977-7003DF26AED4}

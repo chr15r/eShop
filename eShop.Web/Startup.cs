@@ -1,5 +1,6 @@
 using eShop.CoreBusiness.Services;
-using eShop.DataStore.HardCoded;
+using eShop.DataStore.SQL.Dapper;
+using eShop.DataStore.SQL.Dapper.Helpers;
 using eShop.StateStore.DI;
 using eShop.UseCases.AdminPortal.OrderDetailScreen;
 using eShop.UseCases.AdminPortal.OutstandingOrdersScreen;
@@ -50,13 +51,15 @@ namespace eShop.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<WeatherForecastService>();
-
-            services.AddSingleton<IProductRepository, ProductRepository>();
-            services.AddSingleton<IOrderRepository, OrderRepository> ();
+            services.AddSingleton<WeatherForecastService>();           
 
             services.AddScoped<IShoppingCart, eShop.ShoppingCart.LocalStorage.ShoppingCart>();
             services.AddScoped<IShoppingCartStateStore, ShoppingCartStateStore>();
+
+            services.AddTransient<IDataAccess>(sp => new DataAccess(Configuration.GetConnectionString("Default")));
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+
 
             services.AddTransient<IOrderService, OrderService>();
             services.AddTransient<IViewProductUseCase, ViewProductUseCase>();
