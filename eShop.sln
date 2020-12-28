@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.ShoppingCart.LocalSto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.StateStore.DI", "Plugins\eShop.StateStore.DI\eShop.StateStore.DI.csproj", "{2FA07E90-978C-4FD4-A943-925168F23D3C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperDemo", "DapperDemo\DapperDemo.csproj", "{48BD5131-5D6B-456E-BB71-38B8927653A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{2FA07E90-978C-4FD4-A943-925168F23D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FA07E90-978C-4FD4-A943-925168F23D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FA07E90-978C-4FD4-A943-925168F23D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48BD5131-5D6B-456E-BB71-38B8927653A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
